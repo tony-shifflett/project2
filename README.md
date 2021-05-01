@@ -8,7 +8,7 @@
 ## Project Description
 
 This app will provide civic data to users such as a list of their
-elected officials and upcoming elections based on zipcode. 
+elected officials based on zipcode. 
 
 Visual inspiration: https://www.behance.net/gallery/25446589/Voting-Information-Project?tracking_source=search_projects_recommended%7Cvoter%20voting
 
@@ -106,8 +106,8 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | --- | :---: |  :---: | :---: | :---: |
 | Working with API | H | 3hrs|
 | Home Screen |H| 1.5 Hours|
-| Display Location | 1.5 Hours|
-| Display Officials| 2 Hours|
+| Display Location |M| 1.5 Hours|
+| Display Officials|M| 2 Hours|
 | Styling|L| 8 Hours|
 | Total | H | 16hrs| 
 

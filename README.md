@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+# Project Overview
+![Walking Robot](https://media.giphy.com/media/CoD1p64HU8DjsX7dlr/giphy.gif)
+## Project Links
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [https://github.com/tony-shifflett/project2]
+- [https://jolly-galileo-f8ed6f.netlify.app/]
 
-## Available Scripts
+## Project Description
 
-In the project directory, you can run:
+This app will provide civic data to users such as a list of their
+elected officials and upcoming elections based on zipcode. 
 
-### `npm start`
+Visual inspiration: https://www.behance.net/gallery/25446589/Voting-Information-Project?tracking_source=search_projects_recommended%7Cvoter%20voting
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## API
 
-### `npm test`
+This project uses the Google Civic Info API to accept info about a user's address and return a list of elected officials and other political information relevant to that location. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Example: 
+https://civicinfo.googleapis.com/civicinfo/v2/representatives?address=70068&key=AIzaSyAjF7-RqPI7T8xVRsYQHQwztV8Z85DvTSQ
 
-### `npm run build`
+```
+{     "name": "John Kennedy",
+      "address": [
+        {
+          "line1": "416 Russell Senate Office Building",
+          "city": "Washington",
+          "state": "DC",
+          "zip": "20510"
+        }
+      ],
+      "party": "Republican Party",
+      "phones": [
+        "(202) 224-4623"
+      ],
+      "urls": [
+        "https://www.kennedy.senate.gov/"
+      ],
+      "photoUrl": "https://www.kennedy.senate.gov/sites/default/files/Senator-Kennedy-headshot._s.jpg",
+      "channels": [
+        {
+          "type": "Facebook",
+          "id": "SenatorJohnKennedy"
+        },
+        {
+          "type": "Twitter",
+          "id": "senjohnkennedy"
+        },
+        {
+          "type": "YouTube",
+          "id": "UCAabrsorq5Dx3b1KG49sH4A"
+        }
+      ]
+    }
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Wireframes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Mobile Wireframes
+- [https://imgur.com/m9CfEG1]
+### Tablet Wireframes
+- [https://imgur.com/KyrGNr0]
+### Desktop Wireframes
+- [https://imgur.com/7HkmLb2]
+### React Architecture
+- [https://imgur.com/beYKJqT]
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### MVP/PostMVP - 5min
+ 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### MVP 
+- Find and use external api 
+- Render data on page 
+- Allow user to interact with the page
+- Create HomePage with form that accepts user zipcode
+- Feed zipcode into API call
+- Display user location data based on data returned from API call
+- Allow User to select whether to display state or sederal officials
+- Display such officials on new page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### PostMVP EXAMPLE
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Cross reference User Location with Google Maps Api to display nearby polling location 
+- Display additional info about voting records of selected officials
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Components
+Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Component | Description | 
+| --- | :---: |  
+| App | This will make the initial data pull and include React Router| 
+|HomeScreen| First Page rendering the zipsearch component|
+|ZipSearch|Renders an input form that accepts user zipcode|
+|PickLevel|Diplays a button allowing user to choose whether the next page will display info about state or federal officials|
+| NavBar| This will render the navbar | 
+|Display Location| Renders a page displaying user location from 
+|DisplayOfficials| This will Render a page containing Official Cards
+| OfficialCard| This will render a box displaying info describing individual elected officals based on user location| 
 
-### Code Splitting
+## Time Line + Priority Chart
+| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| Working with API | H | 3hrs|
+| Home Screen |H| 1.5 Hours|
+| Display Location | 1.5 Hours|
+| Display Officials| 2 Hours|
+| Styling|L| 8 Hours|
+| Total | H | 16hrs| 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Additional Libraries
+ Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc. 
 
-### Analyzing the Bundle Size
+## Code Snippet
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Use this section to include a brief code snippet of functionality that you are proud of an a brief description.  Code snippet should not be greater than 10 lines of code. 
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+function reverse(string) {
+	// here is the code to reverse a string of text
+}
+```

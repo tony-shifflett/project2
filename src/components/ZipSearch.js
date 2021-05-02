@@ -2,7 +2,10 @@
 
 const ZipSearch = ()=>{
     return (
-        <h2>ZipSearch component</h2>
+        <>
+            <input type='text' id='zipsearch' placeholder="ZIPCODE"/>
+            <input type='submit' value='submit'/>
+        </>
     )
 }
 

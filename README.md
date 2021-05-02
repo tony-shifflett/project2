@@ -106,6 +106,7 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | --- | :---: |  :---: | :---: | :---: |
 | Working with API | H | 3hrs|
 | Home Screen |H| 1.5 Hours|
+|Implement Router|H|2 Hours|
 | Display Location |M| 1.5 Hours|
 | Display Officials|M| 2 Hours|
 | Styling|L| 8 Hours|

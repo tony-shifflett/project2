@@ -1,4 +1,5 @@
 import React, {useRef} from 'react'
+import { Link} from 'react-router-dom'
 
 const ZipSearch = ()=>{
 
@@ -10,7 +11,10 @@ const ZipSearch = ()=>{
     return (
         <form onSubmit={submitHandler}>
             <input ref={zipCodeRef} type='text' id='zipsearch' placeholder="ZIP" />
-            <input type='submit' value='submit'/>
+            {/* Look into this Link style; likely not best practice */}
+              <Link to="/SelectionPage">
+                <input type='submit' value='submit'/>
+              </Link>
         </form>
     )
 }

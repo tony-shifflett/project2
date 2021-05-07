@@ -38,3 +38,42 @@
   }
 }
 /* Custom Styling here */
+#homepage{
+  height: 100vh;
+  background-color: #2367AB;
+  color: white;
+  border: 10px solid darkred;
+}
+
+*{
+  background-color: #2367AB;
+}
+input{
+  background-color: white;
+}
+.display-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.official{
+  border: 2px solid white;
+  margin: 10px;
+  width: 33vw;
+}
+@media screen and (min-width:768px) {
+  .display-board{
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width:1280px) {
+  .display-board{
+    flex-direction: row;
+  }
+
+  .official{
+    margin-top: 25vh;
+    align-self: center;
+  }
+}

@@ -18,7 +18,7 @@ const HomePage = (props) => {
     
 
     return (
-      <>
+      <div id="homepage">
         <div className="home">
             <h1>Civic Data</h1>
         </div>
@@ -26,7 +26,7 @@ const HomePage = (props) => {
             <input ref={zipCodeRef} type='text' id='zipsearch' placeholder="ZIP" />
                 <input type='submit' value='submit'/>
         </form>
-      </>
+      </div>
 
     )
   };

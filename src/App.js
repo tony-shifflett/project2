@@ -9,6 +9,7 @@ import DisplayOfficials from './DisplayOfficials';
 
 function App() {
   let [zipCode, setZipCode] = useState("")
+  const [civicData, setCivicData] = useState(null)
   return (
     <div className="App">
       <Switch>
@@ -18,17 +19,18 @@ function App() {
        
         <Route
           path="/SelectionPage"
-          render={(routerProps) => <SelectionPage {...routerProps} zipCode={zipCode} />}
+          render={(routerProps) => <SelectionPage {...routerProps} zipCode={zipCode} 
+          civicData={civicData} setCivicData={setCivicData}/>}
         />
 
         <Route
           path="/Federal"
-          render={(routerProps) => <DisplayOfficials {...routerProps} zipCode={zipCode} level={"federal"}/>}
+          render={(routerProps) => <DisplayOfficials {...routerProps} zipCode={zipCode} level={"federal"} civicData={civicData} setCivicData={setCivicData}/>}
         />
 
         <Route
           path="/State"
-          render={(routerProps) => <DisplayOfficials {...routerProps} zipCode={zipCode} level={"state"}/>}
+          render={(routerProps) => <DisplayOfficials {...routerProps} zipCode={zipCode} level={"state"} civicData={civicData} setCivicData={setCivicData}/>}
         />
       </Switch>
     </div>

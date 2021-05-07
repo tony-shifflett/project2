@@ -6,11 +6,11 @@ const SelectionPage = (props)=>{
     const zipCode = props.zipCode
     const url = `https://civicinfo.googleapis.com/civicinfo/v2/representatives?address=${zipCode}&key=AIzaSyAjF7-RqPI7T8xVRsYQHQwztV8Z85DvTSQ`
 
-    const [civicData, setCivicData] = useState(null)
+    // const [civicData, setCivicData] = useState(null)
     const getCivicData=async()=>{
         const response = await fetch(url)
         const data= await response.json()
-        setCivicData(data)
+        props.setCivicData(data)
         console.log(data)
       }
 
@@ -29,7 +29,7 @@ const SelectionPage = (props)=>{
   const loaded = ()=>{  
      return(
       <>
-        <LocationDisplay civicData={civicData}/>
+        <LocationDisplay civicData={props.civicData}/>
         <input type="button" value="State" onClick={stateButtonHandler}/>
         <input type="button" value="Federal" onClick={federalButtonHandler}/>
       </>
@@ -42,7 +42,7 @@ const SelectionPage = (props)=>{
   }
 
 
-  return civicData? loaded():loading()
+  return props.civicData? loaded():loading()
 }
 
 export default SelectionPage

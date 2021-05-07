@@ -105,11 +105,11 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Working with API | H | 3hrs|
-| Home Screen |H| 1.5 Hours|
-|Implement Router|H|2 Hours|
-| Display Location |M| 1.5 Hours|
-| Display Officials|M| 2 Hours|
-| Styling|L| 8 Hours|
+| Home Screen |H| 1.5 Hours|Complete|1 Hour|
+|Implement Router|H|2 Hours|complete|1.5 Hours|
+| Display Location |M| 1.5 Hours|2 Hours|Ongoing|
+| Display Officials|M| 2 Hours|Complete|1 Hour|
+| Styling|L| 8 Hours|Many Hours|Ongoing|
 | Total | H | 16hrs| 
 
 ## Additional Libraries
@@ -117,10 +117,10 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description.  Code snippet should not be greater than 10 lines of code. 
+### There's nothing that was really outstanding, but as I had the most trouble passing my data around the project cleanly, I'm including one of my routes. It's kind of a hack and I think that with a working prototype, I can develop a deeper understanding of the flow and maybe get this more fine-tuned, but I'm happy with the fact that it works.
 
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
+        <Route
+          path="/SelectionPage"
+          render={(routerProps) => <SelectionPage {...routerProps} zipCode={zipCode} 
+          civicData={civicData} setCivicData={setCivicData}/>}
+        />

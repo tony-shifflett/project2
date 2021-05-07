@@ -3,7 +3,8 @@ import './App.css';
 import {Route, Switch} from 'react-router-dom';
 import HomePage from './components/HomePage';
 import SelectionPage from './components/SelectionPage';
-import LocationDisplay from './components/LocationDisplay';
+import DisplayOfficials from './DisplayOfficials';
+
 
 
 function App() {
@@ -18,6 +19,16 @@ function App() {
         <Route
           path="/SelectionPage"
           render={(routerProps) => <SelectionPage {...routerProps} zipCode={zipCode} />}
+        />
+
+        <Route
+          path="/Federal"
+          render={(routerProps) => <DisplayOfficials {...routerProps} zipCode={zipCode} level={"federal"}/>}
+        />
+
+        <Route
+          path="/State"
+          render={(routerProps) => <DisplayOfficials {...routerProps} zipCode={zipCode} level={"state"}/>}
         />
       </Switch>
     </div>

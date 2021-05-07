@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import LocationDisplay from './LocationDisplay'
-// import PickLevel from './PickLevel'
+
 
 const SelectionPage = (props)=>{
     const zipCode = props.zipCode
@@ -16,12 +16,12 @@ const SelectionPage = (props)=>{
 
       const stateButtonHandler = ()=>{
           console.log("it works")
-          props.history.push('/')
+          props.history.push('/State')
       }
 
       const federalButtonHandler = ()=>{
         console.log("it works")
-        props.history.push('/')
+        props.history.push('/Federal')
     }
 
 

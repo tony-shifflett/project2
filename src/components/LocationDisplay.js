@@ -6,7 +6,7 @@ const LocationDisplay = (props)=>{
 
     return (
         <>
-            <h1 >Location Display</h1>
+            <h1 >{props.civicData.normalizedInput.city}, {props.civicData.normalizedInput.state}</h1>
         </>
     )
 }
